@@ -164,6 +164,34 @@ body {
   }
 }
 
+.js .js-accordion dd {
+  display: none;
+}
+.js-accordion dt {
+  cursor: pointer;
+}
+
+.js-accordion dt::after {
+  content: "⮷";
+  padding-left: 10px;
+}
+.js-accordion dt.active::after {
+  content: '⮴';
+}
+.js-accordion dd.active{
+  display: block;
+  animation: slideDown .5s forwards;
+}
+@keyframes slideDown {
+  from{
+    opacity: 0;
+    max-height: 0;
+  }
+  to{
+    opacity: 1;
+    max-height: 200px;
+  }
+}
 /* ======================================================== */
 @media (max-width: 700px) {
   body {
