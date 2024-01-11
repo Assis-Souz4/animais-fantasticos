@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal {
+  background-color: #fff;
+  padding: 40px;
+  border: 10px solid #fb5;
+  box-shadow: 0 0 0 10px #fff;
+  position: relative;
+  min-width: 300px;
+}
+@keyframes modal{
+  from{
+    opacity: 0;
+    transform: translate(0, -30px, 0);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0, 0, 0);
+  }
+}
+.ativo .modal{
+  animation: modal .3s forwards;
+}
+.fechar {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+  background-color: #e54;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+}
+.modal-container.ativo{
+  display: flex;
+}
+.modal label{
+  font-family: "IBM Plex Mono", monospace;
+  display: block;
+  font-weight: bold;
+  margin: 1rem 0 .5rem 0;
+}
+.modal input{
+  width: 100%;
+  padding: .7rem .5rem;
+  box-sizing: border-box;
+}
+form button{
+  display: block;
+  background: #e54;
+  border: nome;
+  border-radius: 4px;
+  padding: .7rem .2rem;
+  font-size: 1rem;
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+  margin-top: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
