@@ -21,3 +21,4 @@ function criaTooltipDiv(element) {
   document.body.appendChild(tooltipDiv);
   return tooltipDiv;
 }
+//
