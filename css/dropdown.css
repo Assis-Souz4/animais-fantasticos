@@ -17,7 +17,7 @@
   background-color: #e54;
   display: block;
   border: 2px solid #333;
-  top: 40px;
+  top: 38px;
 }
 [data-dropdown] .dropdown-menu{
   display: none;
